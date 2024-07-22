@@ -2,27 +2,31 @@
 
 int main(){
 
-    int original[] = {1, 2, 3, 4, 5};
+
+    
+    int original[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int size = sizeof(original) / sizeof(original[0]);
-    int reversed[size];  // Second array to store reversed elements
+    
+
 
     printf("BEFORE REVERSING\n");
     for (int i = 0; i < size; i++){
         printf("%d ", original[i]);
     }
 
-
-    for (int i = 0; i < size; i++){
-        reversed[i] = original[size -1 -i];
+    //Same operation using single array
+    for (int i = 0; i <= size/2; i++){
+        int temp = original[i];
+        original[i] = original[size -1 -i];
+        original[size -1 -i] = temp;
     }
 
     printf("\nAFTER REVERSING\n");
 
     for (int i = 0; i < size; i++)
     {
-        printf("%d ",reversed[i]);
+        printf("%d ",original[i]);
     }
     
-
     return 0;
 }
