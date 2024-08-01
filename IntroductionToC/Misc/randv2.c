@@ -39,8 +39,7 @@ int main(){
 
     while(k<=5){
         printf("What is your answer?");
-        scanf("%c",&ans);
-        fflush(stdin);
+        scanf(" %c",&ans);
         createAnswers(questions);
         countAnswer(questions, ans);
         k++;
